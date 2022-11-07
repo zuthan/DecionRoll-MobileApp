@@ -2,7 +2,7 @@ import 'package:decisionroll/common/bubble_loading_widget.dart';
 import 'package:decisionroll/common/my_appbar.dart';
 import 'package:decisionroll/common/my_drawer.dart';
 import 'package:decisionroll/models/decisions/decision_model.dart';
-import 'package:decisionroll/providers/decisions/user_decisions_stream_provider.dart';
+import 'package:decisionroll/providers/database/user_decisions_stream_provider.dart';
 import 'package:decisionroll/utilities/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,7 +18,7 @@ class UserDecisionsPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     debugPrint("user decisions page: $userId");
-    final decisionsAsync = ref.watch(userDecisionsStreamProvider(userId));
+    final decisionsAsync = ref.watch(userDecisionsProvider(userId));
     return Scaffold(
       backgroundColor: whiteBackgroundColor,
       appBar: MyAppBar(),
