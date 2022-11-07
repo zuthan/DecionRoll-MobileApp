@@ -1,7 +1,6 @@
 import 'package:decisionroll/common/bubble_loading_widget.dart';
 import 'package:decisionroll/common/my_appbar.dart';
 import 'package:decisionroll/common/my_drawer.dart';
-import 'package:decisionroll/models/decisions/decision_model.dart';
 import 'package:decisionroll/providers/database/user_decisions_stream_provider.dart';
 import 'package:decisionroll/utilities/colors.dart';
 import 'package:flutter/material.dart';
