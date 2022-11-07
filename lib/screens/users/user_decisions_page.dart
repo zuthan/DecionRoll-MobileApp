@@ -29,16 +29,15 @@ class UserDecisionsPage extends ConsumerWidget {
               ),
           loading: () => const BubbleLoadingWidget(),
           data: (decisions) {
-            final decisionsList = decisions.toList();
             return ListView.builder(
               shrinkWrap: true,
-              itemCount: decisionsList.length,
+              itemCount: decisions.length,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 8.0,
                   horizontal: 15,
                 ),
-                child: Text(decisionsList[index].title),
+                child: Text(decisions[index].title),
               ),
             );
           }),
